@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="acceuil.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>amangone</title>
+</head>
+<body>
+
+
+<div class="section">
+	<header>
+		<h2><a href="Acceuil.html" style="text-decoration: none; color: #b2d1db" >AMA<sup>ng</sup>ON<sup>e</sup></a></h2>
+		<div class="navigation ">
+			<a href="Acceuil.html">Acceuil</a>
+			<a href="RestoPartenaire.html">Partenaires</a>
+			<a href="RemplirPanier.html">Panier</a>
+			<a href="Contact.html">Contact</a>
+
+
+		</div>
+	</header>
+</div>
+
+<br><br><br><br>
+	<div class="container">
+		<h1>Remplissez votre panier au choix</h1>			
+	</div>
+		
+	<div class="container">
+		<form>
+		<div class="wrapper">
+			<div class="item">
+				
+				<input type="text" name="nom" placeholder="Nom" required>
+			</div>
+			<div class="item">
+				
+				<input type="text" name="prénom" placeholder="Prénom" required>
+			</div>
+			<div class="item">
+				
+				<input type="email" name="email" placeholder="Email" required>
+			</div>
+			<div class="item">
+				
+				<input type="text" name="adresse" placeholder="Adresse de livraison" id="formAdress" required>
+			</div>
+		</div>
+		
+		<div class="wrapper">
+			<div class="item">
+				<label><b>Choix du restaurant : </b></label>
+					<select id="choixResteau" onchange="populateSpe('choixResteau','choixSpe')">
+					<option value="" selected disabled hidden>Select</option>
+					<option>Perlimpinpin</option>
+					<option>Al Manar</option>
+					<option>Feng Sheng</option>	
+				</select>
+			</div>
+			<div class="item">
+				
+				<label><b>&emsp;Spécialité : </b></label>
+					<select id="choixSpe" onchange="populateType('choixSpe','choixType')">
+						<option value="" selected disabled hidden>Select</option>
+
+					</select>	
+			</div>
+			<div class="item">
+				</select>
+				<label><b>&emsp;Type : </b></label>
+					<select id="choixType" onchange="populatePlat('choixType','choixPlat')">
+						<option value="" selected disabled hidden>Select</option>
+						
+					</select>	
+			</div><br><br>
+				
+		</div>
+
+		<div class="wrapper">
+			<div class="item">
+				</select>
+				<label><b>Plat : </b></label>
+				<select id="choixPlat" onchange="enableAjout()">
+				<option value="" selected disabled hidden>Select</option>
+				</select>
+			</div>
+
+			<div class="item">	
+				<label><b>&emsp;Portion</b></label>	
+				<input type="number" name="portion" id="portion" value="1">
+			</div>
+
+			<div class="item">
+				<button type="button" id="ajouteraupanier" disabled onclick="disableAjout()">Ajouter au panier</button>
+			</div>
+			<div class="item">
+				<button type="button" id="enleverdupanier" onclick="enleverduPanier()">Retirer du panier</button>
+			</div>
+			<div class="item">
+				<button type="button" id="viderpanier" onclick="viderPanier()">Vider</button>
+			</div>
+		</div>
+		
+
+		<aside id="pannier">
+			<h3>Pannier&emsp;</h3>
+			<table id="tablepanier">
+				<tr>
+					<th>Restaurant</th>
+					<th>Plat</th>
+					<th>Portions</th>
+					<th>Prix</th>
+				</tr>
+				<tr>
+					<th>Montant</th>
+					<td colspan="3" id="Montant">0€</td>
+				</tr>
+				<tbody id="tablepanierbody">
+
+
+				</tbody>
+			</table>
+
+			<div id="ajouterpanier">
+				<button type="submit" id='passerCommande' onclick="PasserC()" disabled>Passer la commande</button>
+			</div>
+			<script src = "panier.js"></script>
+		</aside>
+	</form>
+	</div>
+</body>
+
+<footer class="footer-global">
+	<div class="footer-left">
+
+		<div>
+			<i class="fa fa-map-pin"></i>
+			<p>1 Avenue Jean Jaures,<br> Saint-Denis 93200 Paris</p>
+		</div>
+
+		<div>
+			<i class="fa fa-envelope-o" ></i>
+			<p><a href="" style="text-decoration: none;color: white">  amangone@gmail.com  </a> </p>
+		</div>
+
+		<div>
+			<i class="fa fa-phone" style="margin-right: 50px"></i>
+			<p> +33 7 20 39 40 59</p>
+		</div>
+
+
+
+	</div>
+
+
+	<div class="footer-center">
+		<p> <h2 style="padding-bottom: 10px"> À propos de nous</h2>
+		La diversité nous rend unique
+		</p>
+		<div class="icons">
+			<a href=""><i class="fa fa-facebook" style="color: #4267B2" ></i></a>
+			<a href=""><i class="fa fa-telegram" style="color: #0088CC" ></i></a>
+			<a href=""><i class="fa fa-instagram" style="color: #C13584"></i></a>
+			<a href=""><i class="fa fa-twitter" style="color: #1DA1F2"></i></a>
+		</div>
+
+
+
+	</div>
+
+
+</footer>
+</body>
+</html>
+
+
+

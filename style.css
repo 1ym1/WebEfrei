@@ -1,0 +1,250 @@
+body{
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    background-image: url("./Images/Background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    font-size: 16px;
+    background-image: whitesmoke;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+hr{
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 15px;
+}
+#name{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 20px;
+}
+li li{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+button:disabled{
+	background-color: gray;
+}
+
+button:enabled{
+	background-color: #22543f;
+}
+
+button:hover:disabled{
+	background-color: gray;
+}
+
+button{
+	font-weight: bold;
+}
+button:hover{
+	background-color: 
+#7edeb0
+;
+}
+button:focus{
+	background-color: #06C167;
+}
+
+select, button, input{
+	padding: 8px;
+	border: none;
+	background-color: #22543f;
+	color: whitesmoke ;
+	border-radius: 5px;
+
+}
+textarea, button{
+    resize: none;
+    margin-left: 20px ;
+}
+.item{
+	margin-bottom: 2%;
+
+}
+::placeholder {
+  color: whitesmoke;
+  opacity: .5;
+}
+
+table{
+	border-collapse: collapse;
+	width: 50%;
+	border: solid 2px;
+	margin-bottom: 2%;
+}
+		
+td, th{
+	border: solid 1px;
+	text-align: center;
+	padding: 3px;
+}
+
+#rating{
+	text-align: center;
+}
+
+#nomRestau{
+	padding-left: 15px;
+}
+
+tr:nth-child(even){
+	background-color: #9cffc6;
+}
+tr:nth-child(odd){
+	background-color: #6cb88c;	
+}
+.wrapper{
+	display: flex;
+	margin: 10px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+input[type="text"], input[type="email"]{
+	width: 100%;
+    margin: 4px;
+    border: none;
+}
+#formAdress{
+
+	width: 400px;
+}
+
+.container{
+	/*background-image: linear-gradient(to bottom right, #5ba687, #6ef5a8 );*/
+	background-color: rgba(110, 245, 166, 0.6);
+	width: 60%;
+	max-width: 800px;
+	min-width: 300px;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding:10px;
+	border:3px solid black;
+	border-radius: 20px;
+	box-shadow: 0 0 10px black;
+}
+#titrePartenaires{
+	margin-top: -70px;
+	width: 100%;
+}
+.container h1{
+	text-align: center;
+}
+#portion{
+	width: 20%;
+	padding-left: 5%;
+}
+#Montant{
+	text-align: center;
+}
+#pannier{
+	display: flex;
+	flex-wrap: wrap;
+}
+.topbar{
+	background-image: linear-gradient(whitesmoke, #d1d1d1);
+	position: relative;
+	margin: 0;
+	margin-bottom: 15px;
+	top: 0px;
+	width: 100%;
+	height: 60px;
+}
+
+@media screen and (max-width: 680px){
+	#pannier{
+		flex-direction: column;
+	}
+	table, input[type="text"], input[type="email"], #formAdress, #titrePartenaires{
+		width: 80%;
+	}
+	.wrapper{
+	
+		flex-direction: column;
+	
+	}
+}
+
+/* je veux faire un espace entre la header est le body (aka container)*/
+.pbody{
+	margin: auto;
+	padding: 10px;
+
+}
+
+/* pour supprimer le point a coté de les listes*/
+li{
+	margin-left: 2%;
+
+}
+#tablepartenaire{
+	width: 600px;
+	margin: auto;
+}
+.element > img{
+    width: 100%;
+    border-radius: 12px;
+}
+.RPmain{
+    width: 80%;
+    margin: auto;
+}
+.diapo{
+    position: relative;
+    overflow: hidden;
+}
+
+.elements{
+    display: flex;
+}
+
+.element{
+    flex: 1 0 100%;
+    
+    position: relative;
+    
+}
+
+.caption{
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+}
+
+#nav-gauche, #nav-droite{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+#nav-droite{
+    right: 0;
+}
+#RPcontainer{
+	height: 50%;
+	width: 100%;
+	margin-bottom: 0;
+}
+.background-image{
+	background-image: url("./Images/Background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position: absolute;
+}
